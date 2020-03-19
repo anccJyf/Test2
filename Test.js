@@ -1,3 +1,3 @@
 var testStr = 'aaa';
-testStr = testStr.split("a");
+testStr = testStr.split("aaa");
 console.log(testStr)
