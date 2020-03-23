@@ -1,0 +1,5 @@
+<h3>运输</h3>
+<!-->async请求同步？<-->
+<div class = "shipping-item" *ngFor = "let shipping of shippingItems | async">
+  <div>{{shipping.type}}{{shipping.price | currency}}</div>
+</div>

@@ -1,0 +1,29 @@
+<p>购物车</p>
+
+<p>
+  <a [routerLink] = "['/shipping']">运输</a>
+</p>
+
+<div class = "cart-item" *ngFor = "let item of items">
+  <div> {{item.name}}{{item.price | currency}} </div>
+</div>
+
+<form [formGroup] = "checkOutForm" (ngSubmit) = "onSubmit(checkOutForm.value)">
+
+  <div>
+    姓名：
+    <input type="text" id="name" formControlName = "name">
+  </div>
+
+  <div>
+    电话：
+    <input type="text" id="tel"  formControlName = "tel">
+  </div>
+  
+  
+  <button class = "button" type="submit">提交</button>
+</form>
+
+<h3>
+    <button [routerLink]="['/']">返回首页</button>
+</h3>
